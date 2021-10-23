@@ -1,0 +1,14 @@
+{
+  "name": "n2gcs",
+  "version": "1.0.0",
+  "description": "n2 de gcs",
+  "main": "server.js ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luismomm2110",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
