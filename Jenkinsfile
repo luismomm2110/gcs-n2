@@ -31,7 +31,7 @@ pipeline{
            }
            stage('Deploying into k8s'){
             steps{
-		withKubeConfig([credentialsId: 'k8s', serverUrl: "nodejs-service.default.svc.cluster.local:8000"])
+		withKubeConfig([credentialsId: 'k8s', serverUrl: "172.17.0.3:8000"])
 	{
                 sh 'kubectl apply -f deployment.yml' 
 	}
