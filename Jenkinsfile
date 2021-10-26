@@ -31,8 +31,7 @@ pipeline{
            }
            stage('Deploying into k8s'){
             steps{
-		https://192.168.49.2:8443/withKubeConfig([credentialsId: 'k8s', serverUrl: "172.17.0.3:8000"])
-	}
+		withKubeConfig([credentialsId: 'k8s', serverUrl: "https://192.168.49.2:8443"])
 	{
                 sh 'kubectl apply -f deployment.yml' 
 	}
